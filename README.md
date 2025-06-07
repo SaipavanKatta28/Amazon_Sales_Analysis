@@ -1,123 +1,148 @@
-# 📊 Amazon Sales Intelligence: From EDA to Business Solutions
+# 📦 Amazon Sales Intelligence: From EDA to Business Solutions
 
-🚀 **Project Overview**  
-This project demonstrates how Exploratory Data Analysis (EDA) and SQL-driven insights can solve real-world business problems for a large-scale e-commerce platform like Amazon. With over 50,000 rows of transactional data across multiple tables, this analysis highlights performance trends, customer behavior, logistics issues, and strategic opportunities using **PostgreSQL** and **Tableau**.
+## 🚀 Project Overview
+This project focuses on performing an **Exploratory Data Analysis (EDA)** and solving critical business problems using a dataset of 50,000+ rows. By analyzing data from various interconnected tables, I aimed to uncover insights, detect anomalies, and provide actionable solutions to optimize business processes for Amazon's operations. 🛒
 
 ---
 
-## 🔍 Dashboard Preview
+## 📊 Dashboard Access  
+👉 **Explore the Dashboard**  
+Due to Tableau Public restrictions on extracted data, you can still review the insights through:  
+- [📄 View Dashboard (PDF)](#)  
 
-> 📌 *Due to Tableau Public publishing limitations, the interactive dashboard is shared in downloadable formats below.*
-
-📄 [**PDF Version of the Dashboard**](#)  
-
-
-These documents include 6 dynamic dashboard pages covering:
-- Revenue & Profit Trends
-- Customer Behavior & Segmentation
-- Product Performance
-- Inventory & Logistics Insights
-- Strategic KPIs (e.g., Churn Rate, Inactive Sellers, Return Time)
 
 ---
 
 ## 🛠️ Technologies Used
-| Tool         | Purpose                                       |
-|--------------|-----------------------------------------------|
-| PostgreSQL   | Data querying and integrity validation        |
-| SQL          | Complex joins, aggregations, window functions |
-| Tableau / Power BI | Visualization, KPI tracking, dashboard creation |
-| Power Query  | ETL operations and calculated columns         |
+- **PostgreSQL**: Used for database querying and schema validation  
+- **SQL**: Wrote advanced queries for exploration and solving business problems  
+- **Power Query**: ETL (Extract, Transform, Load) used during Tableau preprocessing  
+- **Tableau**: Designed an interactive multi-page dashboard to visualize insights
 
 ---
 
-## 💡 What Makes This Project Stand Out?
-- **Real-World Business Cases**: Tackles practical e-commerce challenges like customer retention, inventory delays, churn, pricing optimization, and anomaly detection.
-- **Multi-Table Relationships**: Efficient joins across normalized schemas including `orders`, `products`, `payments`, `shipping`, etc.
-- **KPI-Driven Analysis**: Measures success through dynamic KPIs like average delivery time, churn rate, and customer segmentation.
-- **Recruiter-Ready Visuals**: Professionally designed dashboard, with rich color-coding, KPI cards, line/bar/donut charts, filters, and tile controls.
-- **Scalable Design**: Handles large datasets with reusable logic and optimized calculations.
+## 💡 What Makes This Project Unique?
+- **Real-World Problems**: Tackles realistic challenges faced in large-scale e-commerce operations  
+- **Scalable Dataset**: Demonstrates ability to handle large data volumes  
+- **Actionable Insights**: Offers data-driven recommendations to enhance business processes  
+- **Interactive Tableau Dashboard**: Clean, intuitive visuals that help stakeholders easily explore findings
+
+---
+
+## 📈 Dashboard Pages (in Tableau)
+- **Overview**: Key KPIs like revenue, sales, profit, and trends  
+- **Sales**: Trends over time, actual vs. target sales, and category contribution  
+- **Customer**: Retention, behavior patterns, and segmentation  
+- **Product**: Performance metrics, margins, and return rates  
+- **Logistics**: Shipping delays, inventory updates, and delivery analysis  
+- **Insights**: Consolidated metrics including inactive sellers, payment modes, and order statuses
+
+---
+
+## 🔑 Project Objectives
+
+### 🎯 Primary Goals:
+- Understand relationships across multiple tables  
+- Conduct data quality checks for accuracy and consistency  
+- Generate insights on revenue, sales, customer behavior, and profitability  
+- Solve real business challenges using SQL-driven analysis
 
 ---
 
 ## 💼 Business Problems Solved
 
-### 1️⃣ Data Quality & Structure Validation
-- Checked for nulls, duplicate keys, and mismatched foreign keys
-- Ensured relational integrity across `orders`, `order_items`, `products`, `customers`, etc.
+### 🔍 1. Data Overview & Quality Checks 🧹
+- Explored structure and completeness of all tables  
+- Checked for null values, duplicate keys, and FK mismatches  
+- Ensured integrity in data relationships
 
-### 2️⃣ Inventory Management Automation
-- Real-time stock deduction after sales
-- Inventory auto-updates after product returns
+### 📦 2. Inventory Management Automation 🚛
+- Automated stock deduction post-sale  
+- Synced inventory updates after product returns
 
-### 3️⃣ Revenue Forecasting
-- Predicted future revenue using prior-quarter monthly averages
+### 💰 3. Revenue Forecasting 📈
+- Calculated prior quarter’s average monthly revenue  
+- Forecasted next quarter’s revenue using trend-based logic
 
-### 4️⃣ Dynamic Pricing Strategy
-- Boosted prices of high-demand products (>500 units sold)
-- Discounted slow-moving inventory (<100 units sold)
+### 🛒 4. Dynamic Pricing Adjustments 💸
+- +10% price hike for products with >500 units sold  
+- -5% price drop for products with <100 units sold
 
-### 5️⃣ Profitability & Sales Insights
-- Calculated monthly profit by product: `Revenue - COGS`
-- Built a `monthly_profit` fact table
+### 📊 5. Monthly Profit Analysis 💹
+- Automated calculation of product-level monthly profits (Revenue - COGS)  
+- Stored results in a dedicated `monthly_profit` table
 
-### 6️⃣ Customer Segmentation
-- Tagged customers as **Returning** or **New** based on return history
-- Ranked top customers by spending and frequency
+### 📝 6. Seller Sales Reporting 📃
+- Generated quarterly reports per seller, including:
+  - Total Revenue  
+  - Order Volume  
+  - Top Performing Products
 
-### 7️⃣ Churn & Anomaly Detection
-- Identified churned products and inactive sellers
-- Flagged unusual prices or missing payment/shipping info
+### 🚨 7. Anomaly Detection
+- Identified pricing outliers and inconsistencies  
+- Flagged missing shipping or payment data
 
-### 8️⃣ Logistics & Shipping KPIs
-- Average delivery time
-- Average return time
-- Pending shipment percentage
-- Shipping delays by days
+### 📆 8. Sales Trends & Regional Analysis
+- Detected monthly trends, customer patterns, and geographical sales shifts
 
-### 9️⃣ Executive KPIs & Metrics
-- Successful orders %
-- Payment success rate
-- Customer Lifetime Value (CLTV)
-- Profit margin by product/category
-
----
-
-## 📊 Dataset Overview
-
-| Table         | Description |
-|---------------|-------------|
-| `Category`    | Product category metadata |
-| `Customers`   | Customer demographics and region |
-| `Sellers`     | Seller ID, state, and origin |
-| `Products`    | SKU info, price, COGS, category |
-| `Orders`      | Customer orders and status |
-| `Order_items` | Quantity, total sales, discounts |
-| `Payments`    | Payment status and methods |
-| `Shipping`    | Shipment status, dates, returns |
-| `Inventory`   | Product availability and stock |
+### 👥 9. Customer Segmentation & Insights
+- Labeled customers as Returning or New  
+- Identified top spenders by state  
+- Proposed cross-sell strategies (e.g., Product A buyers not buying Product B)
 
 ---
 
-## 📈 Highlights
+## 📊 Dataset Details
+The dataset spans 50,000+ records across several interrelated tables:
 
-- 💾 50,000+ rows analyzed
-- 🧮 40+ complex SQL queries written
-- 📈 25+ calculated fields in Power BI/Tableau
-- ⚙️ 6-page professional dashboard with slicers, filters, cards, and tooltips
-- 🎯 KPIs covering sales, customers, sellers, logistics, and more
-
----
-
-## 🧭 Future Scope
-
-- ✅ Add ML models for demand forecasting
-- ✅ Enhance churn prediction using classification techniques
-- ✅ Expand to multi-region or seasonal analysis
-- ✅ Build embedded analytics using Python Streamlit or Flask
+| Table       | Description |
+|-------------|-------------|
+| `Category`  | Product category details |
+| `Customers` | Customer names, locations, and addresses |
+| `Sellers`   | Seller information and locations |
+| `Products`  | Product specs, price, COGS, and category |
+| `Orders`    | Order records with date and status |
+| `Order_Items` | Line item details per order |
+| `Payments`  | Payment method and status |
+| `Shipping`  | Shipment provider and delivery outcomes |
+| `Inventory` | Stock availability and warehouse mapping |
 
 ---
 
+## ⚙️ EDA Workflow
 
+### 🧠 Steps Followed:
+- **Data Overview**: Profiled structure, types, and summary stats  
+- **Quality Checks**: Validated keys, cleaned inconsistencies  
+- **Descriptive Stats**: Average price, sales volume, profit margins  
+- **Relationship Exploration**: Mapped foreign key links and usage  
+- **Trend Analysis**: Monthly, quarterly, and category-wise trend tracking  
+- **Outlier Detection**: Identified unusual values and missing attributes  
+- **Visualization Prep**: Transformed summaries for Tableau analysis
 
+---
 
+## 🌟 Key Highlights
+- ✅ Handled 50,000+ records across 9 relational tables  
+- 🧠 Developed 40+ advanced SQL queries including window functions  
+- 🔄 Automated inventory logic for real-time accuracy  
+- 📊 Delivered a multi-layered Tableau dashboard  
+- 🔍 Provided solutions for pricing, retention, and revenue strategy
+
+---
+
+## 🚀 Future Scope
+- **Predictive Modeling**: Apply ML for sales forecasting and churn prediction  
+- **Geographic Expansion**: Dive deeper into region-wise sales and logistics  
+- **Web Integration**: Convert dashboard to a web app using Tableau Embedding or Python (Flask/Streamlit)
+
+---
+
+## 📬 Contact
+
+**Your Name**  
+📧 your.email@example.com  
+🔗 [LinkedIn](https://linkedin.com/in/yourprofile)  
+🌐 [Portfolio](https://yourportfolio.com)
+
+---
