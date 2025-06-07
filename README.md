@@ -136,13 +136,4 @@ The dataset spans 50,000+ records across several interrelated tables:
 - **Geographic Expansion**: Dive deeper into region-wise sales and logistics  
 - **Web Integration**: Convert dashboard to a web app using Tableau Embedding or Python (Flask/Streamlit)
 
----
 
-## 📬 Contact
-
-**Your Name**  
-📧 your.email@example.com  
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile)  
-🌐 [Portfolio](https://yourportfolio.com)
-
----
