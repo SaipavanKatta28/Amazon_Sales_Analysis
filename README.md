@@ -7,7 +7,7 @@ This project focuses on performing an **Exploratory Data Analysis (EDA)** and so
 
 ## 📊 Dashboard Access  
 👉 **Explore the Dashboard**  
-Due to Tableau Public restrictions on extracted data, you can still review the insights through:  
+ Due to data source restrictions and Tableau Public’s limitations on publishing workbooks with extracted or non-supported live connections (e.g., PostgreSQL), the interactive dashboard cannot be published publicly. However, a high-quality PDF version is provided for review.:  
 - [📄 View Dashboard (PDF)](#)  
 
 
